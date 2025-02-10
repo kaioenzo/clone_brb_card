@@ -1,3 +1,4 @@
+import 'package:clone_brb_card/ui/home/widgets/home_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
           stops: [0.0, 0.4512],
         ),
       ),
+      child: HomeAppBar(),
     );
   }
 }
