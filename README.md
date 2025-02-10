@@ -23,7 +23,9 @@ Aplicativo flutter de um clone do aplicativo BRB Card. Utilizando o padrão de a
 - Mockito (Testing)
 - flutter_test
 
-## Architecture Overview
+## Organização do Projeto
+
+```
 📁 lib/
 ├── 📁 data/ # Camada de dados
 │ └── 📁 services/ # Comunicação com API 
@@ -39,6 +41,7 @@ Aplicativo flutter de um clone do aplicativo BRB Card. Utilizando o padrão de a
 │ └── 📁 main/ # App scaffolding
 │
 └── 📁 widgets/ # Componentes reutilizados
+```
 
 ### Arquitetura MVVM 
 
