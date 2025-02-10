@@ -1,4 +1,4 @@
-import 'package:clone_brb_card/ui/home/widgets/home_screen.dart';
+import 'package:clone_brb_card/ui/main/widgets/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'data/services/api/account_service.dart';
@@ -30,7 +30,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'BRB CARD',
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }

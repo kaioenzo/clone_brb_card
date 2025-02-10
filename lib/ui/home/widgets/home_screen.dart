@@ -4,8 +4,6 @@ import 'package:clone_brb_card/ui/home/widgets/my_favorites.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../widgets/app_bar.dart';
-import '../../../widgets/bottom_navigation_bar.dart';
 import 'account_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,33 +11,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Color(0xFF3C6AB2), Color(0xFFFFFFFF)],
-          stops: [0.0, 0.4512],
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: DefaultAppBar(),
-        bottomNavigationBar: DefaultBottomNavigationBar(
-          currentIndex: 0,
-          onTap: (int index) {},
-        ),
-        body: ChangeNotifierProvider.value(
-          value: context.read<AccountViewModel>(),
-          child: const SingleChildScrollView(
-            child: Column(
-              children: [
-                AccountCarousel(),
-                MyFavorites(),
-                LastBuys(),
-              ],
-            ),
-          ),
+    return ChangeNotifierProvider.value(
+      value: context.read<AccountViewModel>(),
+      child: const SingleChildScrollView(
+        child: Column(
+          children: [
+            AccountCarousel(),
+            MyFavorites(),
+            LastBuys(),
+          ],
         ),
       ),
     );
