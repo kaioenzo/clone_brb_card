@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../data/services/api/account_service.dart';
 import '../../../domain/models/account.dart';
-import '../../../domain/models/transacation.dart';
+import '../../../domain/models/transaction.dart';
 
 class AccountViewModel with ChangeNotifier {
   AccountViewModel({
@@ -20,7 +20,7 @@ class AccountViewModel with ChangeNotifier {
       creditCardNumber: '1234 5678 9012 3456',
       transactions: [
         Transaction(
-          id: '1',
+          id: 1,
           description: 'Apple',
           amount: 549.99,
           parcels: 12,
@@ -28,7 +28,7 @@ class AccountViewModel with ChangeNotifier {
           icon: Icons.phone_iphone_outlined,
         ),
         Transaction(
-          id: '2',
+          id: 2,
           description: 'Uber*Uber*Trip',
           amount: 12.96,
           parcels: 1,
@@ -36,7 +36,7 @@ class AccountViewModel with ChangeNotifier {
           icon: Icons.taxi_alert_outlined,
         ),
         Transaction(
-          id: '3',
+          id: 3,
           description: 'Carrefour - Extra',
           amount: 349.75,
           parcels: 3,
@@ -44,7 +44,7 @@ class AccountViewModel with ChangeNotifier {
           icon: Icons.shopping_cart_outlined,
         ),
         Transaction(
-          id: '4',
+          id: 4,
           description: 'Extra',
           amount: 349.75,
           parcels: 1,
@@ -52,7 +52,7 @@ class AccountViewModel with ChangeNotifier {
           icon: Icons.shopping_cart_outlined,
         ),
         Transaction(
-          id: '5',
+          id: 5,
           description: 'Fujioka',
           amount: 122.0,
           parcels: 1,

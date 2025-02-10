@@ -1,4 +1,4 @@
-import 'package:clone_brb_card/domain/models/transacation.dart';
+import 'package:clone_brb_card/domain/models/transaction.dart';
 
 class Account {
   final String id;
