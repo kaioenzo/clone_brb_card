@@ -1,4 +1,5 @@
 import 'package:clone_brb_card/ui/home/view_models/home_viewmodel.dart';
+import 'package:clone_brb_card/ui/home/widgets/my_favorites.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -26,9 +27,7 @@ class HomeScreen extends StatelessWidget {
           value: context.read<AccountViewModel>(),
           child: const SingleChildScrollView(
             child: Column(
-              children: [
-                AccountCarousel(),
-              ],
+              children: [AccountCarousel(), MyFavorites()],
             ),
           ),
         ),
