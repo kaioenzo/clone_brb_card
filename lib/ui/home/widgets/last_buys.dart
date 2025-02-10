@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 
-import '../../../domain/models/transacation.dart';
+import '../../../domain/models/transaction.dart';
 import '../../../widgets/divider.dart';
 import '../view_models/home_viewmodel.dart';
 
