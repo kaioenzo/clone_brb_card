@@ -1,3 +1,4 @@
+import 'package:clone_brb_card/ui/home/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      title: 'BRB CARD',
+      home: HomeScreen(),
     );
   }
 }
