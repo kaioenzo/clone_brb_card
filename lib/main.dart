@@ -1,22 +1,24 @@
 import 'package:clone_brb_card/ui/home/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'data/services/api/account_service.dart';
 import 'ui/home/view_models/home_viewmodel.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        Provider<AccountService>(create: (_) => AccountService()),
-        ChangeNotifierProvider<AccountViewModel>(
-          create: (ctx) => AccountViewModel(
-            accountService: ctx.read<AccountService>(),
+  initializeDateFormatting('pt_BR', null).then(
+    (_) => runApp(
+      MultiProvider(
+        providers: [
+          Provider<AccountService>(create: (_) => AccountService()),
+          ChangeNotifierProvider<AccountViewModel>(
+            create: (ctx) => AccountViewModel(
+              accountService: ctx.read<AccountService>(),
+            ),
           ),
-        ),
-      ],
-      child: const MainApp(),
+        ],
+        child: const MainApp(),
+      ),
     ),
   );
 }
