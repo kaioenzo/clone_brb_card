@@ -1,3 +1,4 @@
+import 'package:clone_brb_card/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -47,19 +48,13 @@ class _AccountCarouselState extends State<AccountCarousel> {
         ? const LinearGradient(
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
-            colors: [
-              Color(0xFF2B66BC),
-              Color(0xFF132D55),
-            ],
+            colors: AppColors.cardGradient1,
             stops: [0.0006, 0.9991],
           )
         : const LinearGradient(
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
-            colors: [
-              Color.fromRGBO(0, 73, 75, 1),
-              Color.fromRGBO(0, 73, 75, 1),
-            ],
+            colors: AppColors.cardGradient2,
           );
   }
 

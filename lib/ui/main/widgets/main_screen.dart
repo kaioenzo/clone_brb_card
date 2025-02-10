@@ -1,3 +1,4 @@
+import 'package:clone_brb_card/theme/colors.dart';
 import 'package:clone_brb_card/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF3C6AB2), Color(0xFFFFFFFF)],
+          colors: AppColors.homeScreenGradient,
           stops: [0.0, 0.4512],
         ),
       ),
