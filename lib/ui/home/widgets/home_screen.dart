@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../widgets/app_bar.dart';
+import '../../../widgets/bottom_navigation_bar.dart';
 import 'account_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,11 +25,19 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: DefaultAppBar(),
+        bottomNavigationBar: DefaultBottomNavigationBar(
+          currentIndex: 0,
+          onTap: (int index) {},
+        ),
         body: ChangeNotifierProvider.value(
           value: context.read<AccountViewModel>(),
           child: const SingleChildScrollView(
             child: Column(
-              children: [AccountCarousel(), MyFavorites(), LastBuys()],
+              children: [
+                AccountCarousel(),
+                MyFavorites(),
+                LastBuys(),
+              ],
             ),
           ),
         ),
